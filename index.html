@@ -11,8 +11,14 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="dependencies/animate.css" /> <!--Can remove-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js" /></script>
+		<script src="dependencies/jquery.lettering.js" /></script> <!--Can remove-->
+		<script src="dependencies/jquery.textillate.js" /></script> <!--Can remove-->
+		<script src="dependencies/jquery.bubble.text.js" /></script>
+		<script src="dependencies/script.js" /></script>
 	</head>
 	<body>
 
@@ -45,11 +51,41 @@
 				<!-- Banner -->
 					<section id="banner">
 						<div class="inner">
-							<div class="logo"><span class="icon fa-diamond"></span></div>
+							<div class="logo"><img src="images/David_Lowes_Profile2.jpg" class="icon"></div>
 							<h2>David Lowes</h2>
 							<p>Welcome to my website. Please feel free to read more about me, or you can check out my resume, projects, view site statistics, or contact me.
 Source available here.</p>
+<b>You can contact me on -</b>
+	<p div id="colorchange"><span id="bubble"></span>@djlowes.com</div></p>
 						</div>
+<!-- Change Colour Script -->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>
+<script>
+	/*function cc() {
+	var x = document.getElementById('colorchange').innerHTML;
+	/*for (x === "Well, not anything!@djlowes.com" || x = "You get the point..@djlowes.com") {
+		x.style.color = "red";
+	}
+  var i = 0
+	for (i = 0; i === x.length+30; i++) {
+    x.style.color = "red";
+}
+}*/
+function display() {
+	var x = document.getElementById('bubble').innerHTML;
+if(x == "Well, not anything!" || x == "You get the point..") {
+	document.getElementById('colorchange').innerHTML.style.color = "#FF0000"
+}
+return display
+}
+
+function displayy() {
+	var x = document.getElementById('bubble').innerHTML;
+	var i = 0
+	for (i = 0; i = x.length+19; i++) {}
+return document.getElementById('colorchange').innerHTML.style.color = "#FF0000"
+}
+</script>
 					</section>
 
 				<!-- Wrapper -->
@@ -128,6 +164,16 @@ Source available here.</p>
 								</div>
 							</section>
 
+				<!-- Five -->
+					<section id="three" class="wrapper spotlight style3">
+						<div class="inner">
+							<a href="#" class="image"><img src="images/pic03.jpg" alt="" /></a>
+							<div class="content">
+								<h2 class="major">Statistics</h2>
+								<p>Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras turpis ante, nullam sit amet turpis non, sollicitudin posuere urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla cursus.</p>
+								<a href="#" class="special">Learn more</a>
+							</div>
+						</div>
 					</section>
 
 				<!-- Footer -->
