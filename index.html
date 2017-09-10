@@ -17,8 +17,6 @@
 		<script src="https://code.jquery.com/jquery-3.2.1.min.js" /></script>
 		<script src="dependencies/jquery.lettering.js" /></script> <!--Can remove-->
 		<script src="dependencies/jquery.textillate.js" /></script> <!--Can remove-->
-		<script src="dependencies/jquery.bubble.text.js" /></script>
-		<script src="dependencies/script.js" /></script>
 	</head>
 	<body>
 
@@ -51,7 +49,9 @@
 				<!-- Banner -->
 					<section id="banner">
 						<div class="inner">
-							<div class="logo"><img src="images/David_Lowes_Profile2.jpg" class="icon"></div>
+							<div class="logo">
+								<img src="images/David_Lowes_Profile2.jpg" class="icon" alt="Profile Photo" onmouseover="onHover();" onmouseout="offHover();" />
+							</div>
 							<h2>David Lowes</h2>
 							<p>Welcome to my website. Please feel free to read more about me, or you can check out my resume, projects, view site statistics, or contact me.
 Source available here.</p>
@@ -60,43 +60,29 @@ Source available here.</p>
 						</div>
 <!-- Change Colour Script -->
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>
-<script>
-	/*function cc() {
-	var x = document.getElementById('colorchange').innerHTML;
-	/*for (x === "Well, not anything!@djlowes.com" || x = "You get the point..@djlowes.com") {
-		x.style.color = "red";
-	}
-  var i = 0
-	for (i = 0; i === x.length+30; i++) {
-    x.style.color = "red";
-}
-}*/
-function display() {
-	var x = document.getElementById('bubble').innerHTML;
-if(x == "Well, not anything!" || x == "You get the point..") {
-	document.getElementById('colorchange').innerHTML.style.color = "#FF0000"
-}
-return display
-}
+	<script>
+		window.setInterval(color_text, 100);
 
-function displayy() {
-	var x = document.getElementById('bubble').innerHTML;
-	var i = 0
-	for (i = 0; i = x.length+19; i++) {}
-return document.getElementById('colorchange').innerHTML.style.color = "#FF0000"
-}
-</script>
-					</section>
+			function color_text(){
+  			var x = document.getElementById('bubble').innerHTML;
+  				if(x == "Well, not anything!" || x == "You get the point..") {
+    				document.getElementById('colorchange').style.color = "#FF0000"
+  				} else {
+						document.getElementById('colorchange').style.color = "#FFFFFF"
+					}
+			}
+	</script>
+			</section>
 
 				<!-- Wrapper -->
 					<section id="wrapper">
 
 						<!-- One -->
 							<section id="one" class="wrapper spotlight style1">
-								<div class="inner">
-									<a href="#" class="image"><img src="images/pic01.jpg" alt="" /></a>
+								<div class="inner", id="rotating" >
+									<img class="image" src="images/logos.gif" alt="Logos" /></a>
 									<div class="content">
-										<h2 class="major">Magna arcu feugiat</h2>
+										<h2 class="major">Sales & Growth</h2>
 										<p>Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras turpis ante, nullam sit amet turpis non, sollicitudin posuere urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla cursus.</p>
 										<a href="#" class="special">Learn more</a>
 									</div>
@@ -106,9 +92,9 @@ return document.getElementById('colorchange').innerHTML.style.color = "#FF0000"
 						<!-- Two -->
 							<section id="two" class="wrapper alt spotlight style2">
 								<div class="inner">
-									<a href="#" class="image"><img src="images/pic02.jpg" alt="" /></a>
+									<img src="images/googles.gif" alt="" class="image" /></a>
 									<div class="content">
-										<h2 class="major">Tempus adipiscing</h2>
+										<h2 class="major">Sales Enablement</h2>
 										<p>Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras turpis ante, nullam sit amet turpis non, sollicitudin posuere urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla cursus.</p>
 										<a href="#" class="special">Learn more</a>
 									</div>
@@ -120,7 +106,7 @@ return document.getElementById('colorchange').innerHTML.style.color = "#FF0000"
 								<div class="inner">
 									<a href="#" class="image"><img src="images/pic03.jpg" alt="" /></a>
 									<div class="content">
-										<h2 class="major">Nullam dignissim</h2>
+										<h2 class="major">Software Engineer</h2>
 										<p>Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras turpis ante, nullam sit amet turpis non, sollicitudin posuere urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla cursus.</p>
 										<a href="#" class="special">Learn more</a>
 									</div>
@@ -170,7 +156,7 @@ return document.getElementById('colorchange').innerHTML.style.color = "#FF0000"
 							<a href="#" class="image"><img src="images/pic03.jpg" alt="" /></a>
 							<div class="content">
 								<h2 class="major">Statistics</h2>
-								<p>Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras turpis ante, nullam sit amet turpis non, sollicitudin posuere urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla cursus.</p>
+								<p>There are 100 interesting statistics streaming to the right of this sentence. There are 100 statistics about me that you probably don't care about HERE</p>
 								<a href="#" class="special">Learn more</a>
 							</div>
 						</div>
@@ -225,6 +211,8 @@ return document.getElementById('colorchange').innerHTML.style.color = "#FF0000"
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
+			<script src="dependencies/jquery.bubble.text.js" /></script>
+			<script src="dependencies/script.js" /></script>
 
 	</body>
 </html>

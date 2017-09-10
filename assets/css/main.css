@@ -2159,7 +2159,7 @@
 			display: none;
 		}
 
-/* Image */
+/* Images */
 
 	.image {
 		border-radius: 5px;
@@ -2212,6 +2212,59 @@
 			.image.main img {
 				width: 100%;
 			}
+
+
+			.image1 {
+				border-radius: 5px;
+				border: 0;
+				display: inline-block;
+				position: relative;
+			}
+
+				.image1 img {
+					border-radius: 5px;
+					display: block;
+				}
+
+				.image1.left, .image.right {
+					max-width: 40%;
+				}
+
+					.image1.left img, .image.right img {
+						width: 100%;
+					}
+
+				.image1.left {
+					float: left;
+					padding: 0 1.5em 1em 0;
+					top: 0.25em;
+				}
+
+				.image1.right {
+					float: right;
+					padding: 0 0 1em 1.5em;
+					top: 0.25em;
+				}
+
+				.image1.fit {
+					display: block;
+					margin: 0 0 2em 0;
+					width: 100%;
+				}
+
+					.image1.fit img {
+						width: 100%;
+					}
+
+				.image1.main {
+					display: block;
+					margin: 0 0 3em 0;
+					width: 100%;
+				}
+
+					.image1.main img {
+						width: 100%;
+					}
 
 /* List */
 
@@ -3130,8 +3183,8 @@
 				line-height: 2.25em;
 				text-align: middle;
 				width: 3em;
-			}
 
+			}
 
 		#banner h2 {
 			-moz-transition: opacity 0.5s ease, -moz-transform 0.5s ease, -moz-filter 0.25s ease;

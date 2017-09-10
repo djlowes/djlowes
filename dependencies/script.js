@@ -15,7 +15,7 @@ $(document).ready(function() {
         'If-you-would-like-to-reach-me',
         'Be-specific-and-use-an-email-such-as',
         'Work',
-        'General-enquiry',
+        'Contract-Job',
         'Or-even',
         'Lets-get-coffee',
         'I-will-stop-distracting-you-now',
@@ -29,11 +29,18 @@ $(document).ready(function() {
         element: $('#bubble'),
         newText: phrases[index++],
         letterSpeed: 200,
-        repeat: Infinity,
+        repeat: 19,
         timeBetweenRepeat: 1000,
         callback: function() {
             this.newText = phrases[index++ % len];
         },
     });
 
+
+
+
+    $(".icon").hover(
+        function() {$(this).attr("src","images/David_Lowes_Profile5.png");},
+        function() {$(this).attr("src","images/David_Lowes_Profile2.jpg");
+    });
 });
