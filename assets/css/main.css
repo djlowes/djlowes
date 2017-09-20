@@ -3920,3 +3920,25 @@
 		}
 
 	}
+
+/* Login Page */
+
+	#login {
+		margin-top: 20.5em;
+		margin-left: 11.5em;
+		margin-right: 11.5em;
+		text-align: center;
+		border: 1px solid white;
+		border-radius: 15px;
+
+	}
+#login h2 {
+		margin-top: 1.0em
+
+}
+
+	#loginpage {
+		margin-top: 2.5em;
+		padding-left: 9.5em;
+		padding-right: 9.5em;
+	}
